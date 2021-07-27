@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#i="SRR000982.filtered.variants.annotated.vcf"
+i=$1
+
+grep -v "^#" ${i} | cut -f7 | grep "PASS" | uniq -c
+
